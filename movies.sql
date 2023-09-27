@@ -1,0 +1,14 @@
+select count(*) from movie;
+select sum(ratings) from movie;
+select title from movie order by title desc;
+select title from movie order by title asc;
+select distinct ratings from movie;
+select min(ratings) from movie;
+select max(ratings) from movie;
+select * from movie;
+select * from budget;
+insert into budget( title, m_budget) values('poc2','100cr');
+select m.title,m.genre,m.release_year,m.ratings,b.m_budget from movie as m cross join budget as b where m.title = b.title;
+select movie.title,movie.ratings,budget.m_budget from movie cross join budget;
+select a.title, b.title ,b.ratings from movie a, movie b where a.ratings < b.ratings;
+select a.title,b.ratings from movie a, movie b;
